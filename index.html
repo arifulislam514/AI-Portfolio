@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariful Islam | Full-Stack Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the portfolio */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background similar to GitHub/VS Code themes */
+            color: #c9d1d9; /* Light text color */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            color: #58a6ff; /* Primary accent color */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 70%;
+            height: 3px;
+            background-color: #58a6ff;
+            border-radius: 9999px;
+        }
+        .skill-card {
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(88, 166, 255, 0.2), 0 4px 6px -2px rgba(88, 166, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0d1117] bg-opacity-95 shadow-lg border-b border-gray-700 backdrop-blur-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white hover:text-[#58a6ff] transition duration-300">A<span class="text-[#58a6ff]">I</span>.Dev</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-300 hover:text-[#58a6ff] transition duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-[#58a6ff] transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-[#58a6ff] transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-[#58a6ff] transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0d1117] py-2">
+            <a href="#about" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-[#58a6ff]">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-[#58a6ff]">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-[#58a6ff]">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-300 hover:bg-gray-800 hover:text-[#58a6ff]">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center pt-24 pb-12 md:pb-0">
+            <div class="max-w-4xl space-y-6">
+                <p class="text-xl md:text-2xl text-gray-400">Hello, I'm</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">Ariful Islam</h1>
+                <p class="text-3xl md:text-5xl font-light text-[#58a6ff]">Full-Stack Developer</p>
+                <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+                    Proficient in **Django, Node.js, React.js**, **MySQL, and PostgreSQL**, with hands-on experience in developing and deploying end-to-end web applications.
+                </p>
+                <div class="pt-8 space-x-4">
+                    <a href="#projects" class="inline-block px-8 py-3 bg-[#58a6ff] text-white font-semibold rounded-lg shadow-lg hover:bg-[#79a9e7] transition duration-300 transform hover:scale-105">
+                        View Projects
+                    </a>
+                    <a href="mailto:ariful425616@gmail.com" class="inline-block px-8 py-3 bg-gray-700 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-600 transition duration-300 transform hover:scale-105">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 border-t border-gray-800">
+            <h2 class="text-4xl section-title">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center mt-10">
+                <div class="space-y-6 text-gray-300">
+                    <p>I am a Full-stack developer with a strong backend focus, proficient in Django, Node.js, React.js, MySQL, and PostgreSQL. I have hands-on experience in developing and deploying full-stack web applications, emphasizing back-end logic, secure data handling, and robust API development.</p>
+                    <p>Supported by solid frontend capabilities using modern UI frameworks like React.js and Tailwind CSS, I ensure clean data flow and high-quality user experience across all devices.</p>
+                    <p>I am dedicated to continuous technical expansion, especially in backend architecture, and am seeking a collaborative environment to apply my expertise and start my career.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-[#58a6ff]">Education & Core Strengths</h3>
+                    <ul class="space-y-3 list-disc list-inside text-gray-300">
+                        <li>Diploma in Engineering (CST) from Brahmanbaria Polytechnic Institute (2024 - 2027).</li>
+                        <li>Strong foundation in computer science basics: algorithms, programming, and database management.</li>
+                        <li>Gained extensive hands-on experience in full-stack projects using Django, Node.js, React.js, MySQL, and PostgreSQL.</li>
+                        <li>Soft Skills: Adaptability, Critical Thinking, Learning Agility, Fast Learner, Self-Motivated.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 border-t border-gray-800">
+            <h2 class="text-4xl section-title">Technical Skills</h2>
+            <div class="mt-10 space-y-12">
+
+                <!-- Programming & Frameworks -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-white">Programming & Frameworks</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🐍</p>
+                            <p class="text-sm font-medium">Python</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">📜</p>
+                            <p class="text-sm font-medium">JavaScript</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">⚛️</p>
+                            <p class="text-sm font-medium">React.js</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🌐</p>
+                            <p class="text-sm font-medium">Django</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">⚡</p>
+                            <p class="text-sm font-medium">Django REST Framework</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🖼️</p>
+                            <p class="text-sm font-medium">Tailwind / Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend & Database -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-white">Backend, API & Database</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🟢</p>
+                            <p class="text-sm font-medium">Node.js / Express</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🔗</p>
+                            <p class="text-sm font-medium">REST API Dev</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🐘</p>
+                            <p class="text-sm font-medium">PostgreSQL</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">💾</p>
+                            <p class="text-sm font-medium">MySQL</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🔑</p>
+                            <p class="text-sm font-medium">JWT / RBAC Auth</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">📦</p>
+                            <p class="text-sm font-medium">Django ORM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dev Tools & Deployment -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-white">Dev Tools & Deployment</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">💻</p>
+                            <p class="text-sm font-medium">Git / GitHub</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">☁️</p>
+                            <p class="text-sm font-medium">Cloudinary</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🚀</p>
+                            <p class="text-sm font-medium">Vercel / Render</p>
+                        </div>
+                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
+                            <p class="text-2xl mb-1">🛠️</p>
+                            <p class="text-sm font-medium">NPM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 border-t border-gray-800">
+            <h2 class="text-4xl section-title">Featured Projects</h2>
+            <p class="mt-4 text-xl text-gray-400">Practical full-stack applications built and deployed using Python/Django and React.</p>
+
+            <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: HomeCare Hub -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-cyan-500/50">
+                    <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=HomeCare+Hub+App" alt="HomeCare Hub Screenshot" class="w-full h-48 object-cover transition duration-500 group-hover:scale-[1.02]">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-white">HomeCare Hub</h3>
+                        <p class="text-gray-400 mb-4 text-sm">A full-stack web platform for managing services, cart system, user authentication, and order workflows for home-based services.</p>
+                        <div class="flex flex-wrap gap-2 text-xs mb-4">
+                            <span class="bg-[#58a6ff] text-gray-900 px-3 py-1 rounded-full font-medium">Django REST</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">React.js</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">PostgreSQL</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">Cloudinary</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/arifulislam514/HomeCareHubFrontend" target="_blank" class="text-[#58a6ff] hover:text-white transition duration-300 font-medium flex items-center">
+                                GitHub (Client)
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                            <a href="https://home-care-hub-frontend.vercel.app/" target="_blank" class="text-gray-400 hover:text-white transition duration-300 font-medium flex items-center">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Event Management System -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-cyan-500/50">
+                    <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=Event+Manager" alt="Event Management System Screenshot" class="w-full h-48 object-cover transition duration-500 group-hover:scale-[1.02]">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 text-white">Event Management System</h3>
+                        <p class="text-gray-400 mb-4 text-sm">A role-based system utilizing Django for managing events, categories, and participant sign-ups with separate Admin/Manager/Participant dashboards.</p>
+                        <div class="flex flex-wrap gap-2 text-xs mb-4">
+                            <span class="bg-[#58a6ff] text-gray-900 px-3 py-1 rounded-full font-medium">Django (Template-based)</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">Tailwind CSS</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">PostgreSQL</span>
+                            <span class="bg-gray-600 text-white px-3 py-1 rounded-full font-medium">Django ORM</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/arifulislam514/Event-Management-System" target="_blank" class="text-[#58a6ff] hover:text-white transition duration-300 font-medium flex items-center">
+                                GitHub (Server)
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                            <a href="https://event-management-system-iyph.onrender.com" target="_blank" class="text-gray-400 hover:text-white transition duration-300 font-medium flex items-center">
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3: Placeholder for Future Project (Empty for now) -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-inner border border-gray-700 group transition duration-300 hover:shadow-gray-500/50 flex items-center justify-center p-6 text-center">
+                    <div class="space-y-3">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-500">More Projects Soon</h3>
+                        <p class="text-sm text-gray-600">Archived or upcoming project slot. Check my GitHub for more detailed work!</p>
+                        <a href="https://github.com/arifulislam514" target="_blank" class="text-[#58a6ff] hover:text-white transition duration-300 font-medium flex items-center justify-center pt-2">
+                            View GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 border-t border-gray-800">
+            <h2 class="text-4xl section-title">Get In Touch</h2>
+            <div class="mt-10 max-w-2xl mx-auto p-8 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 text-center">
+                <p class="text-xl mb-8 text-gray-300">
+                    For professional inquiries, collaboration, or to discuss my technical skills, please reach out directly via email or connect with me on the platforms below.
+                </p>
+
+                <h3 class="text-2xl font-semibold mb-6 text-[#58a6ff]">Direct Communication</h3>
+                
+                <a href="mailto:ariful425616@gmail.com" class="inline-flex items-center justify-center w-full md:w-auto px-10 py-3 bg-[#58a6ff] text-white font-semibold rounded-lg shadow-lg hover:bg-[#79a9e7] transition duration-300 transform hover:scale-[1.02] space-x-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>ariful425616@gmail.com</span>
+                </a>
+
+                <div class="mt-8 pt-6 border-t border-gray-700">
+                    <p class="text-lg font-medium text-gray-300 mb-4">Connect and Code</p>
+                    <div class="flex flex-wrap justify-center space-x-6 text-sm">
+                        <a href="https://www.linkedin.com/in/ariful-islam-337247390/" target="_blank" class="text-gray-400 hover:text-[#58a6ff] transition duration-300">LinkedIn</a>
+                        <a href="https://github.com/arifulislam514" target="_blank" class="text-gray-400 hover:text-[#58a6ff] transition duration-300">GitHub</a>
+                        <a href="https://codeforces.com/profile/ariful425616" target="_blank" class="text-gray-400 hover:text-[#58a6ff] transition duration-300">Codeforces</a>
+                        <a href="https://leetcode.com/u/Ariful_514/" target="_blank" class="text-gray-400 hover:text-[#58a6ff] transition duration-300">LeetCode</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 mt-12 py-8 border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2025 Ariful Islam. Full-Stack Developer Portfolio. Built with Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('a');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked (for smoother navigation)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
