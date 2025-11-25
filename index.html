@@ -6,6 +6,7 @@
     <title>Ariful Islam | Full-Stack Developer Portfolio</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Custom styles for the portfolio */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -69,7 +70,7 @@
     <main class="container mx-auto px-4">
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center text-center pt-24 pb-12 md:pb-0">
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center md:pb-0">
             <div class="max-w-4xl space-y-6">
                 <p class="text-xl md:text-2xl text-gray-400">Hello, I'm</p>
                 <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">Ariful Islam</h1>
@@ -89,7 +90,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 md:py-32 border-t border-gray-800">
+        <section id="about" class="py-20 md:py-24 border-t border-gray-800">
             <h2 class="text-4xl section-title">About Me</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center mt-10">
                 <div class="space-y-6 text-gray-300">
@@ -110,106 +111,55 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 md:py-32 border-t border-gray-800">
+        <section id="skills" class="py-20 md:py-24 border-t border-gray-800">
             <h2 class="text-4xl section-title">Technical Skills</h2>
-            <div class="mt-10 space-y-12">
-
-                <!-- Programming & Frameworks -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-white">Programming & Frameworks</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🐍</p>
-                            <p class="text-sm font-medium">Python</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">📜</p>
-                            <p class="text-sm font-medium">JavaScript</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">⚛️</p>
-                            <p class="text-sm font-medium">React.js</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🌐</p>
-                            <p class="text-sm font-medium">Django</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">⚡</p>
-                            <p class="text-sm font-medium">Django REST Framework</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🖼️</p>
-                            <p class="text-sm font-medium">Tailwind / Bootstrap</p>
-                        </div>
+            <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Programming & Frameworks (Vertical Card) --><div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-6 text-[#58a6ff]">Programming & Frameworks</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center px-4 py-1.5 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium border border-blue-700"><i class="fab fa-python mr-2"></i>Python</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-yellow-600/20 text-yellow-300 rounded-full text-sm font-medium border border-yellow-700"><i class="fab fa-js mr-2"></i>JavaScript</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-cyan-600/20 text-cyan-300 rounded-full text-sm font-medium border border-cyan-700"><i class="fab fa-react mr-2"></i>React.js</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-green-600/20 text-green-300 rounded-full text-sm font-medium border border-green-700"><i class="fas fa-leaf mr-2"></i>Django</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-orange-600/20 text-orange-300 rounded-full text-sm font-medium border border-orange-700"><i class="fas fa-network-wired mr-2"></i>Django REST Framework</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-purple-600/20 text-purple-300 rounded-full text-sm font-medium border border-purple-700"><i class="fas fa-paint-brush mr-2"></i>Tailwind / Bootstrap</span>
                     </div>
                 </div>
 
-                <!-- Backend & Database -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-white">Backend, API & Database</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🟢</p>
-                            <p class="text-sm font-medium">Node.js / Express</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🔗</p>
-                            <p class="text-sm font-medium">REST API Dev</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🐘</p>
-                            <p class="text-sm font-medium">PostgreSQL</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">💾</p>
-                            <p class="text-sm font-medium">MySQL</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🔑</p>
-                            <p class="text-sm font-medium">JWT / RBAC Auth</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">📦</p>
-                            <p class="text-sm font-medium">Django ORM</p>
-                        </div>
+                <!-- Backend & Database (Vertical Card) --><div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-6 text-[#58a6ff]">Backend, API & Database</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center px-4 py-1.5 bg-green-600/20 text-green-300 rounded-full text-sm font-medium border border-green-700"><i class="fab fa-node-js mr-2"></i>Node.js / Express</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-red-600/20 text-red-300 rounded-full text-sm font-medium border border-red-700"><i class="fas fa-exchange-alt mr-2"></i>REST API Dev</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-sky-600/20 text-sky-300 rounded-full text-sm font-medium border border-sky-700"><i class="fas fa-database mr-2"></i>PostgreSQL</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium border border-blue-700"><i class="fas fa-database mr-2"></i>MySQL</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-yellow-600/20 text-yellow-300 rounded-full text-sm font-medium border border-yellow-700"><i class="fas fa-shield-alt mr-2"></i>JWT / RBAC Auth</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-gray-600/20 text-gray-300 rounded-full text-sm font-medium border border-gray-700"><i class="fas fa-code mr-2"></i>Django ORM</span>
                     </div>
                 </div>
 
-                <!-- Dev Tools & Deployment -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-white">Dev Tools & Deployment</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">💻</p>
-                            <p class="text-sm font-medium">Git / GitHub</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">☁️</p>
-                            <p class="text-sm font-medium">Cloudinary</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🚀</p>
-                            <p class="text-sm font-medium">Vercel / Render</p>
-                        </div>
-                        <div class="skill-card p-4 bg-gray-800 rounded-lg text-center border border-gray-700">
-                            <p class="text-2xl mb-1">🛠️</p>
-                            <p class="text-sm font-medium">NPM</p>
-                        </div>
+                <!-- Dev Tools & Deployment (Vertical Card) --><div class="p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-6 text-[#58a6ff]">Dev Tools & Deployment</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="inline-flex items-center px-4 py-1.5 bg-gray-600/20 text-gray-300 rounded-full text-sm font-medium border border-gray-700"><i class="fab fa-github mr-2"></i>Git / GitHub</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-blue-600/20 text-blue-300 rounded-full text-sm font-medium border border-blue-700"><i class="fas fa-cloud-upload-alt mr-2"></i>Cloudinary</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-green-600/20 text-green-300 rounded-full text-sm font-medium border border-green-700"><i class="fas fa-server mr-2"></i>Vercel / Render</span>
+                        <span class="inline-flex items-center px-4 py-1.5 bg-red-600/20 text-red-300 rounded-full text-sm font-medium border border-red-700"><i class="fab fa-npm mr-2"></i>NPM</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32 border-t border-gray-800">
+        <section id="projects" class="py-20 md:py-24 border-t border-gray-800">
             <h2 class="text-4xl section-title">Featured Projects</h2>
             <p class="mt-4 text-xl text-gray-400">Practical full-stack applications built and deployed using Python/Django and React.</p>
 
             <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Project Card 1: HomeCare Hub -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-cyan-500/50">
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-blue-500/50">
                     <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=HomeCare+Hub+App" alt="HomeCare Hub Screenshot" class="w-full h-48 object-cover transition duration-500 group-hover:scale-[1.02]">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">HomeCare Hub</h3>
@@ -233,7 +183,7 @@
                 </div>
 
                 <!-- Project Card 2: Event Management System -->
-                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-cyan-500/50">
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl border border-gray-700 group transition duration-300 hover:shadow-blue-500/50">
                     <img src="https://placehold.co/600x400/1e293b/a5b4fc?text=Event+Manager" alt="Event Management System Screenshot" class="w-full h-48 object-cover transition duration-500 group-hover:scale-[1.02]">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-3 text-white">Event Management System</h3>
@@ -271,7 +221,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 md:py-32 border-t border-gray-800">
+        <section id="contact" class="py-20 md:py-24 border-t border-gray-800">
             <h2 class="text-4xl section-title">Get In Touch</h2>
             <div class="mt-10 max-w-2xl mx-auto p-8 bg-gray-800 rounded-xl shadow-2xl border border-gray-700 text-center">
                 <p class="text-xl mb-8 text-gray-300">
