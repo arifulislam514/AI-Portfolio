@@ -115,7 +115,6 @@ export default function Contact() {
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_subject" value="New Submission from Portfolio" />
               <input type="text" name="_honey" style={{ display: "none" }} />
-              <input type="hidden" name="_next" value="https://arifulislam514.github.io/AI-Portfolio/" />
 
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">
@@ -191,7 +190,7 @@ export default function Contact() {
         >
           <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 max-w-sm mx-4 shadow-2xl modal-animate text-center">
             <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-[#58a6ff]/20 mb-6">
-              <i className="fas fa-check text-3xl text-[#58a6ff]" />
+              <i className="fas fa-check text-3xl text-[#25e76c]" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
             <p className="text-gray-400 mb-6">
